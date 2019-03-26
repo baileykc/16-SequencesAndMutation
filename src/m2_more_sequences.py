@@ -186,7 +186,7 @@ def index_of_largest_number(numbers, n):
 
     """
     # ------------------------------------------------------------------
-    # Done: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
     index_of_max = 0
