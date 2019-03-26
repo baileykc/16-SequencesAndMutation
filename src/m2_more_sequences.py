@@ -106,12 +106,7 @@ def shortest_string(strings):
     # TODO: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
-    strings = ''
-    for k in range(1, len(strings)):
-        if strings[k] < strings[k_for_min]:
-            k_for_min = k
 
-    return k_for_min
 
 def run_test_index_of_largest_number():
     """ Tests the   index_of_largest_number   function. """
@@ -245,11 +240,15 @@ def number_of_stutters(s):
        :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    total = 0
+    for k in range(len(s) - 1):
+        if s[k + 1] == s[k]:
+            total = total + 1
 
-
+    return total
 def run_test_is_palindrome():
     """ Tests the   is_palindrome   function. """
     print()
@@ -327,7 +326,7 @@ def is_palindrome(s):
     #   above are particularly good examples to work by hand.
     ####################################################################
     # ------------------------------------------------------------------
-
+    
 
 # ----------------------------------------------------------------------
 # Some problems loop (iterate) through two or more sequences
