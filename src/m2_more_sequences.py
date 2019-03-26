@@ -16,7 +16,7 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    #run_test_shortest_string()
+    run_test_shortest_string()
     run_test_index_of_largest_number()
     run_test_number_of_stutters()
     run_test_is_palindrome()
@@ -103,9 +103,15 @@ def shortest_string(strings):
       :type strings: list[str]   or tuple(str)
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    smallest = 0
+    for k in range(1, len(strings)):
+        if len(strings[k]) < len(strings[smallest]):
+            smallest = k
+    return strings[smallest]
+
 
 
 def run_test_index_of_largest_number():
@@ -326,7 +332,7 @@ def is_palindrome(s):
     #   above are particularly good examples to work by hand.
     ####################################################################
     # ------------------------------------------------------------------
-    
+
 
 # ----------------------------------------------------------------------
 # Some problems loop (iterate) through two or more sequences
