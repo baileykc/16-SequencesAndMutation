@@ -255,6 +255,8 @@ def number_of_stutters(s):
             total = total + 1
 
     return total
+
+
 def run_test_is_palindrome():
     """ Tests the   is_palindrome   function. """
     print()
@@ -323,7 +325,7 @@ def is_palindrome(s):
       :type s: str
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     ####################################################################
@@ -332,6 +334,13 @@ def is_palindrome(s):
     #   above are particularly good examples to work by hand.
     ####################################################################
     # ------------------------------------------------------------------
+    new_s = ''
+    for k in range(len(s), 0, -1):
+        new_s = new_s + str(s[k - 1])
+    if new_s == s:
+        return True
+    else:
+        return False
 
 
 # ----------------------------------------------------------------------
@@ -390,10 +399,15 @@ def count_same(sequence1, sequence2):
       type: sequence2: tuple or list or string
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+    count = 0
+    for k in range(len(sequence1)):
+        if sequence1[k] == sequence2[k]:
+            count = count + 1
 
+    return count
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
