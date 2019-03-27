@@ -149,7 +149,7 @@ def MUTATE_delete_negatives(numbers):
         if numbers[k] < 0:
             del numbers[k]
 
-#Ask about why this works. Why do we increment down in the for k in range. 
+#Ask about why this works. Why do we increment down in the for k in range.
 
 
 # ----------------------------------------------------------------------
